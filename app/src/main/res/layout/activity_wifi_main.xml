@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="20dp"
+    android:layout_height="match_parent"
+    tools:context=".WifiMainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvStatus"
+        android:background="#E0F5FF"
+        android:textSize="30dp"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/btnWifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvStatus"
+        android:layout_alignStart="@id/tvStatus"
+        android:layout_marginTop="10dp"
+        android:text="Connect Wifi" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Discover"
+        android:id="@+id/btnDiscover"
+        android:layout_below="@id/tvStatus"
+        android:layout_alignEnd="@id/tvStatus"
+        android:layout_marginTop="10dp"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="#E0F5FF"
+        android:id="@+id/lvDevices"
+        android:layout_below="@id/btnDiscover"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lvDevices"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:text="Send Data" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvMessage"
+        android:layout_below="@id/btnSend"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:background="#FFC9C5"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:hint="Enter Message"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtMessage" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Send"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSendMessage"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
